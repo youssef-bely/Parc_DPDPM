@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block titre %}Utilisateurs{% endblock titre %}
+{% block titre_page %}Utilisateurs{% endblock titre_page %}
+{% block button_add %}
+
+<a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+        <path d="M16 19h6"></path>
+        <path d="M19 16v6"></path>
+        <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+     </svg>
+    Nouveau
+  </a>
+{% endblock button_add %}
+{% block body %}
+<div class="container-xl">
+    
+    Ceci un tableau des utilisateurs
+    <table class="table table-vcenter card-table table-striped">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Grade</th>
+            <th>Email</th>
+            <th class="w-1"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maryjo Lebarree</td>
+            <td class="text-muted">
+              Ingénieur
+            </td>
+            <td class="text-muted"><a href="#" class="text-reset">mlebarree5@unc.edu</a></td>
+            <td>
+                <div class="btn-group w-100">
+                    <a href="#" class="btn btn-green btn-icon" aria-label="Button">
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <a href="#" class="btn btn-orange btn-icon" aria-label="Button">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <a href="#" class="btn btn-red btn-icon" aria-label="Button">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                  </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+{% endblock body %}
+
